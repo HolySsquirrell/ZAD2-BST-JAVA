@@ -1,5 +1,6 @@
 package com.example;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +14,9 @@ class AppTest {
 
         queue.enqueue(1);
         queue.enqueue(2);
+
+        assertEquals(1, queue.dequeue());
+        assertEquals(2, queue.dequeue());
     }
 
     @Test
